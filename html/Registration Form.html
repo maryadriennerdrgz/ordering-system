@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A ">
+        <meta name="author" content="AR-DE Company">
+        <meta name="date" content="March 11, 2022">
+        <meta name="keywords" content="Burger, Order Online">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ylaiza's Burger House</title>
+        <link rel="icon" type="image/x-icon" href="https://www.4shared.com/img/z-0hzU4Uiq/s25/17f79325c90/Burger">
+
+    <style>           
+            html
+            {
+                padding: 0px;
+                margin: 0px;
+            }
+            header
+            {
+                padding: 0;
+                background-image: linear-gradient(to right, #02f2a6, #23453a);
+                color: white;
+                overflow:auto;
+            }
+            body
+            {
+                width:100%;
+                min-height: 100vh;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+                font-family: TW Cen MT, serif;
+                background-color: #F6FDD8;
+                overflow: auto;
+            }
+
+            a:visited, a:focus
+            {
+                text-decoration: none;
+                color: white;
+            }
+            a:hover
+            {
+                color: #1b2226;
+            }
+
+            /*PROFILE*/
+
+            .P{
+                display: inline-block;
+                position: static;                           
+            }
+
+            .P button
+            {
+                border: none;
+                margin: 3px;
+                display: inline-block;
+                font-weight: bold;
+                padding: 4px 30px;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline:none;
+                color: #181411;
+                box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.24), 0px 0px 10px 0 rgba(0,0,0,0.19);
+                border: 0px solid black;
+                border-radius: 5px;
+                vertical-align: middle;
+                transition: .3s;
+                background-color: transparent;
+               
+            }
+
+            .P button:hover
+            {
+                background-color:#CFF527;              
+            }
+
+            .P button:active
+            {
+                background-color: #CFF527;
+                box-shadow: 0 2px #666;
+                transform: translateY(4px);
+            }
+
+
+
+            /*BURGERS MENU*/
+            .BM {
+                display: inline-block;
+                position: static;                           
+            }
+
+            .BM button
+            {
+                border: none;
+                margin: 3px;
+                display: inline-block;
+                font-weight: bold;
+                padding: 4px 30px;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline:none;
+                color: #1C191A;
+                box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.24), 0px 0px 10px 0 rgba(0,0,0,0.19);
+                border: 0px solid #1C191A;
+                border-radius: 5px;
+                vertical-align: middle;
+                transition: .3s;
+                background-color: transparent;
+               
+            }
+
+            .BM button:hover
+            {
+                background-color:#CFF527;              
+            }
+
+            .BM button:active
+            {
+                background-color: #CFF527;
+                box-shadow: 0 2px #666;
+                transform: translateY(4px);
+            }
+
+
+
+            /*ABOUT US*/
+            
+            .AU{
+                display: inline-block;
+                position: static;                           
+            }
+            
+            .AU button
+            {
+                
+                border: none;
+                margin: 3px;
+                display: inline-block;
+                font-weight: bold;
+                padding: 4px 30px;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline:none;
+                color: #181411;
+                box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.24), 0px 0px 10px 0 rgba(0,0,0,0.19);
+                border: 0px solid black;
+                border-radius: 5px;
+                vertical-align: middle;
+                transition: .3s;
+                background-color: transparent;
+               
+            }
+
+            .AU button:hover
+            {
+                background-color:#CFF527;              
+            }
+
+            .AU button:active
+            {
+                background-color: #CFF527;
+                box-shadow: 0 2px #666;
+                transform: translateY(4px);
+            }
+
+            /*LOGIN/REGISTER*/
+            .LR{
+                display: inline-block;
+                position: static; 
+                float: right;
+                        
+            }
+            
+            .LR button
+            {
+                border: none;
+                margin: 3px;
+                display: inline-block;
+                font-weight: bold;
+                padding: 4px 40px;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline:none;
+                color: #F6FDD8;
+                box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.24), 0px 0px 10px 0 rgba(0,0,0,0.19);
+                border: 0px solid black;
+                border-radius: 5px;
+                vertical-align: middle;
+                transition: .3s;
+                background-color: transparent;
+               
+            }
+
+
+            .LR button:active
+            {
+                background-color: #23453a;
+                box-shadow: 0 2px #666;
+                transform: translateY(4px);
+            }
+
+            .topnav
+            {
+                background-image: linear-gradient(to right, #02F2A6, #02F2A6);
+                overflow: auto;
+                background-color: #02F2A6;          
+            }
+            ._topnav
+            {
+                background-image: linear-gradient(to right, #02F2A6, #23453a);
+                padding: 5px;             
+                margin-left: 10%;
+                font-family: TW Cen MT,serif;
+                font-size: 21px;
+                color: #181411;
+                line-height: 18px;
+                text-align: left;
+                background-color: #23453a;                   
+            }
+
+            .input
+            {
+                text-align: end;
+            }
+           
+         
+
+            * 
+            {
+            margin: 0;
+            padding: 0;
+            }
+
+            .imgbox 
+            {
+                display: grid;
+                height: 100%;
+            }
+
+            .icon
+            {
+                height: 100%;
+                float: right;
+                margin-right: 20px;
+            }
+            .center-fit 
+            {
+                max-width: 100%;
+                max-height: 100vh;
+                margin: auto;
+            }
+            footer
+            {
+                font: 100vw;
+                color: white;
+                background-color: #23453A;
+                display: fixed;
+                text-align: center;
+            }
+
+            .custom-select 
+            {
+                float: right;
+                width: 97%;
+                padding: 20px;
+                margin: 5px 0 18px 0;
+                display: inline-block;
+                border: none; 
+                background: #23453A;
+                color: white;
+                border-radius: 20px;
+
+
+            }   
+
+
+
+
+
+            .picture
+            {
+                text-align: center;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                border-radius: 20px;
+                padding: 1%;
+                background-color: #23453A;
+                color: white;
+            }
+
+            
+            .columnleft_inside
+            {
+                float: left;
+                width: 45%;
+            }
+
+            .columnright_inside
+            {
+                float: right;
+                width: 45%;
+                margin-right: 2%;
+            }
+
+            .row:after 
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            input[type=text], input[type=password], input[type="email"]
+            {
+                width: 97%;
+                padding: 20px;
+                margin: 5px 0 18px 0;
+                display: inline-block;
+                border: none; 
+                background: #23453A;
+                color: white;
+                border-radius: 20px;
+
+            }
+
+            input[type=text]:focus, input[type=password]:focus 
+            {
+                background-color: #ddd;
+                outline: none;
+            }
+
+            button 
+            {
+                background-color: #23453A;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            button:hover 
+            {
+                opacity:1;
+            }
+
+            .cancelbtn 
+            {
+                padding: 14px 20px;
+                background-color: #02f2a6;
+            }
+
+            .cancelbtn, .signupbtn
+            {
+                float: left;
+                width: 50%;
+            }
+
+            .signupconsent 
+            {
+                text-align: center;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                border-radius: 20px;
+                padding: 2%;
+                background-color: #23453A;
+                color: white;
+            }
+
+            .container 
+            {
+                padding: 16px;
+            }
+
+            .modal 
+            {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: #23453A;
+                padding-top: 50px;
+            }
+
+            .modal-content 
+            {
+                background-color: #F6FDD8;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 3px solid #23453A;
+                width: 80%; /* Could be more or less, depending on screen size */
+            }
+
+            hr 
+            {
+                border: 1px solid #F6FDD8;
+                margin-bottom: 25px;
+            }
+
+            .close 
+            {
+                position: absolute;
+                right: 35px;
+                top: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                color: #f1f1f1;
+            }
+
+            .close:hover,
+            .close:focus 
+            {
+                color: #f44336;
+                cursor: pointer;
+            }
+
+            .clearfix::after 
+            {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            @media screen and (max-width: 300px) 
+            {
+                .cancelbtn, .signupbtn 
+                {
+                    width: 100%;
+                }
+            }
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div style="height: 90px; margin: 0;">
+               <a href="https://maryadriennerdrgz.github.io/Ylaiza-s-Burger-House/Home.html"> <img id ="burger" src="https://www.4shared.com/img/z-0hzU4Uiq/s25/17f79325c90/Burger" style=" margin-top:5px;margin-left: 40px; pointer-events:none;" alt="BURGER width="150" height="130""></a>
+            </div>
+            <p class="loginsignup">
+                <!-- <label class="search";>SEARCH: <input type="search"></label> -->
+                <!--<a href="" style="text-decoration: none;">LOGIN</a> | <a href="" style="text-decoration: none;">SIGNUP</a>-->
+            </p>
+            <div class="topnav">
+                <div class="_topnav">
+                    
+                        <div class="P">
+                        <button>PROFILE</button>
+                        </div>
+
+                        <div class="BM">
+                        <button>BURGERS MENU</button>
+                        </div>    
+                
+                        <div class="AU">
+                            <a href="https://maryadriennerdrgz.github.io/Ylaiza-s-Burger-House/AboutUs.html"><button>ABOUT US</button></a>
+                        </div>
+
+                        <div class="LR" >
+                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">REGISTER</button>
+                        </div>
+
+                        <div class="LR" >
+                            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">LOGIN</button>
+                        </div>
+
+                        <div class="icon">
+                            <img class="center-fit" img src="https://www.4shared.com/img/YN8q_TCNea/s25/17ff7be5f78/cart-5-256" alt = "HOME width="30" height="30" ">
+                        </div>
+                         
+                </div> 
+            </div>
+        </header>
+        <div class="imgbox">
+            <img class="center-fit" img src="https://www.4shared.com/img/dT8vrt88ea/s25/17f79190830/HOME" alt = "HOME width="800" height="650" ">
+        </div>
+            
+              <div id="id01" class="modal">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Modal">&times;</span>
+              <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <div class="signupconsent">
+                        <p id="consent">In accordance to Data Privacy Act of 2012,</p>
+                        <p>The creators of Ylaiza's Burger House are responsible for the protection of user data. Upon filling up this form, you are giving your full consent to let us process and collect your data. All collected data will only be used for verification purposes and will not be shared to any third parties or organization.</p>
+                    </div>
+                  <h1>Register</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+                  <label for="username"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="username" required>
+
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+            
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" minlength="8" name="psw" required>
+            
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                
+                  <div class="row">
+                  <div class="columnleft_inside">
+                        <label for="firstname"><b>Fisrt Name</b></label> 
+                        <input type="text" placeholder="First Name" name="firstname" required>
+                  </div>
+    
+                  <div class="columnright_inside">
+                            <label for="lastname"><b>Last Name</b></label> 
+                            <input type="text" placeholder="Last Name" name="lastname" required>
+                  </div>
+                  </div>
+
+
+                  <label for="address"><b>Address</b></label>
+                  <input type="text" placeholder="Enter Address" name="address" required>
+
+                  <div class="row">
+                    <div class="columnleft_inside">
+                          <label for="contactno"><b>Contact Number</b></label> 
+                          <input type="text" placeholder="Contact Number" name="contactno" required>
+                    </div>
+      
+                    <div class="columnright_inside">
+                          <label for="avatar"><b>Choose Your Gender</b></label> 
+                                <div class="custom-select" style="width:200px;">
+                                <select>
+                                  <option value="0">Select gender:</option>
+                                  <option value="1">Male</option>
+                                  <option value="2">Female</option>
+                                </select>
+                              </div>
+                                
+                    </div>
+                    </div>
+                    <label for="Avatar"><b>Choose Your Avatar</b></label><br>
+                    <form action="/action_page.php">
+                        <div class="picture">
+                        <input type="file" id="myFile" name="filename">
+                        <input type="submit">
+                        </div>
+                      </form>
+                
+                  
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+            
+                  <p>By creating an account you agree to our <a href="https://maryadriennerdrgz.github.io/Ylaiza-s-Burger-House/T&C.html" style="color:blue">Terms & Privacy</a>.</p>
+            
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="signup" class="signupbtn">Sign Up</button>
+                  </div>
+                </div>
+                </form>
+                </div>
+
+                <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Modal">&times;</span>
+                    <form class="modal-content" action="/action_page.php">
+                      <div class="container">
+                        <h1>Login</h1>
+                        <p>Please fill in this form to signin the account.</p>
+                        <hr>
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" minlength="8" name="psw" required>
+                  
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+                  
+                        <div class="clearfix">
+                          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                          <button type="submit" class="signupbtn">Login</button>
+                        </div>
+                      </div>
+                      </form>
+                      </div>
+            
+            <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+
+            <script>
+            // Get the modal
+            var modal2 = document.getElementById('id02');
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal2) {
+            modal2.style.display = "none";
+               }
+            }
+            </script>
+
+            
+        
+        <footer>
+            <p style="margin: 0px; padding: 7px;">
+                A platform for ordering system, by engineering students. <br>
+                All Rights Reserved. 2022
+            </p>
+        </footer>
+    </body>
+</html>
+</div>

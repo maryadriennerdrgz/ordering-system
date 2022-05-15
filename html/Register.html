@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A ">
+        <meta name="author" content="AR-DE Company">
+        <meta name="date" content="March 11, 2022">
+        <meta name="keywords" content="Burger, Order Online">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ylaiza's Burger House</title>
+        <link rel="icon" type="image/x-icon" href="https://www.4shared.com/img/z-0hzU4Uiq/s25/17f79325c90/Burger">
+
+    <style>           
+            html
+            {
+                padding: 0px;
+                margin: 0px;
+            }
+            header
+            {
+                padding: 0;
+                background-image: linear-gradient(to right, #02f2a6, #23453a);
+                color: white;
+                overflow:auto;
+            }
+            body
+            {
+                width:100%;
+                min-height: 100vh;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+                font-family: TW Cen MT, serif;
+                background-color: #23453A;
+                overflow: auto;
+            }
+
+            a:visited, a:focus
+            {
+                text-decoration: none;
+                color: white;
+            }
+            a:hover
+            {
+                color: #1b2226;
+            }
+
+
+            .input
+            {
+                text-align: end;
+            }
+           
+         
+
+            * 
+            {
+            margin: 0;
+            padding: 0;
+            }
+
+            .imgbox 
+            {
+                display: grid;
+                height: 100%;
+            }
+
+            .icon
+            {
+                height: 100%;
+                float: right;
+                margin-right: 20px;
+            }
+            .center-fit 
+            {
+                max-width: 100%;
+                max-height: 100vh;
+                margin: auto;
+            }
+
+            .custom-select 
+            {
+                
+                width: 97%;
+                padding: 20px;
+                margin: 2px 5px 18px 3px;
+                display: inline-block;
+                border: none; 
+                background: #23453A;
+                color: white;
+                border-radius: 20px;
+
+
+            }
+            
+            .picture
+            {
+                text-align: center;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                border-radius: 20px;
+                padding: 1%;
+                background-color: #23453A;
+                color: white;
+            }
+
+            
+            .columnleft_inside
+            {
+                float: left;
+                width: 45%;
+            }
+
+            .columnright_inside
+            {
+                float: right;
+                width: 45%;
+                margin-right: 2%;
+            }
+
+            .row:after 
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            input[type=text], input[type=password], input[type="email"]
+            {
+                width: 97%;
+                padding: 20px;
+                margin: 5px 0 18px 0;
+                display: inline-block;
+                border: none; 
+                background: #23453A;
+                color: white;
+                border-radius: 20px;
+
+            }
+
+
+
+            input[type=text]:focus, input[type=password]:focus 
+            {
+                background-color: #ddd;
+                outline: none;
+                color: #23453A
+            }
+
+            button 
+            {
+                background-color: #23453A;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            button:hover 
+            {
+                opacity:1;
+            }
+
+            .cancelbtn 
+            {
+                padding: 14px 20px;
+                background-color: #02f2a6;
+            }
+
+            .cancelbtn, .signupbtn
+            {
+                float: left;
+                width: 50%;
+            }
+
+            .signupconsent 
+            {
+                text-align: center;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                border-radius: 20px;
+                padding: 2%;
+                background-color: #23453A;
+                color: white;
+            }
+
+            .container 
+            {
+                padding: 16px;
+            }
+
+            .modal 
+            {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: #23453A;
+                padding-top: 50px;
+            }
+
+            .modal-content 
+            {
+                background-color: #F6FDD8;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 3px solid #23453A;
+                width: 80%; /* Could be more or less, depending on screen size */
+                border-radius: 20px;
+            }
+
+            hr 
+            {
+                border: 1px solid #F6FDD8;
+                margin-bottom: 25px;
+            }
+
+            .close 
+            {
+                position: absolute;
+                right: 35px;
+                top: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                color: #f1f1f1;
+            }
+
+            .close:hover,
+            .close:focus 
+            {
+                color: #f44336;
+                cursor: pointer;
+            }
+
+            .clearfix::after 
+            {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            @media screen and (max-width: 300px) 
+            {
+                .cancelbtn, .signupbtn 
+                {
+                    width: 100%;
+                }
+            }
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="#"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Modal">&times;</span></a>
+
+        </header>
+     
+        
+        <form class="modal-content" action="/action_page.php">
+            
+            <div class="container">
+                
+              <h1>Register</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" minlength="8" name="psw" required>
+        
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
+            
+              <div class="row">
+              <div class="columnleft_inside">
+                    <label for="firstname"><b>Fisrt Name</b></label> 
+                    <input type="text" placeholder="First Name" name="firstname" required>
+              </div>
+
+              <div class="columnright_inside">
+                        <label for="lastname"><b>Last Name</b></label> 
+                        <input type="text" placeholder="Last Name" name="lastname" required>
+              </div>
+              </div>
+
+
+              <label for="address"><b>Address</b></label>
+              <input type="text" placeholder="Enter Address" name="address" required>
+
+              <div class="row">
+                <div class="columnleft_inside">
+                      <label for="contactno"><b>Contact Number</b></label> 
+                      <input type="text" placeholder="Contact Number" name="contactno" required>
+                </div>
+  
+                <div class="columnright_inside">
+                    <label for="gender"><b>Gender</b></label> 
+                    <input type="text" placeholder="Gender" name="gender" required>
+                </div>
+
+                </div>
+                <label for="Avatar"><b>Choose Your Avatar</b></label><br>
+                <form action="/action_page.php">
+                    <div class="picture">
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit">
+                    </div>
+                  </form>
+            
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+        
+              <p>By creating an account you agree to our <a href="https://maryadriennerdrgz.github.io/Ylaiza-s-Burger-House/T&C.html" style="color:blue">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" name="signup" name = "submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+            
+        </form> 
+    </body>
+</html>
